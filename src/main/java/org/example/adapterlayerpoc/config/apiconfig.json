@@ -1,0 +1,22 @@
+{
+  "apiMappings": [
+    {
+      "apiName": "createOrUpdateParty",
+      "inputToTargetMapping": {
+        "name": "name",
+        "type": "type",
+        "countryOfOrigin": "country_of_origin",
+        "legalTerm": "legal_term",
+        "companyStatus": "status",
+        "enabled": "enabled",
+        "onboardingFlow": "onboarded_at"
+      },
+      "inputNestedMappings": {
+        "attributes.METADATA.instance_list": ["msmeName", "msmeEndDate"],
+        "attributes.PREFERENCE.instance_list": ["tcsCompliant", "leiNumber"]
+      },
+      "endpoint": "https://localhost:8080/pm/party",
+      "method": "POST"
+    }
+  ]
+}
